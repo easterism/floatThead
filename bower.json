@@ -1,26 +1,34 @@
 {
   "name": "jquery.floatThead",
-  "version": "1.2.2",
   "homepage": "http://mkoryak.github.io/floatThead/",
   "authors": [
     "Misha Koryak"
   ],
   "description": "Unobtrusively float any table's header without breaking styles or events",
-  "main": "jquery.floatThead.js",
+  "main": [
+    "dist/jquery.floatThead.js",
+    "dist/jquery.floatThead.min.js"
+  ], 
+  "browser": [
+    "dist/jquery.floatThead.min.js"
+  ], 
   "keywords": [
-    "float table header", "locked header", "table header", "table", "sticky header", "floatThead", "scrolling table"
+    "float table header", "locked header", "table header", "table", "sticky header", "floatThead", "scrolling table", "fixed header"
   ],
-  "license": "Creative Commons Attribution-NonCommercial 4.0",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "demo",
-    "USED_BY.md"
+    "Gruntfile.coffee",
+    "jquery.floatThead._.js",
+    "jquery.floatThead.js",
+    "package.json",
+    ".gitignore"
   ],
   "dependencies": {
-    "jquery": ">= 1.9.0",
-    "underscore": ">= 1.3.0"
+    "jquery": ">= 1.8.0"
   }
 }

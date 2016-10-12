@@ -1,134 +1,109 @@
-jquery.floatThead v1.2.2
+jquery.floatThead 1.4.4
 =================
+[![woot](http://giant.gfycat.com/AnyGloriousAlpaca.gif "or just click")](http://mkoryak.github.io/floatThead/)
 
-Float the table header without special css. This plugin assumes nothing about your table markup and "just works" without losing your events or styles. Supports floating the header while scrolling within the window or while scrolling within a container with overflow. 
+#Documentation & Examples: http://mkoryak.github.io/floatThead/
 
-Check out the demo / docs page for copious examples:
+Float the table header on scroll. No changes to your HTML/CSS are required, it just works.
+Supports floating the header while scrolling within the window or while scrolling within a container with overflow.
+Supports responsive tables.
 
-###[Demos and Docs](http://mkoryak.github.io/floatThead/)  
+
+:heart_eyes_cat:**My cat loves it**:heart_eyes_cat:
 
 
-Jekyll templates to generate the docs are in the [gh-pages branch](https://github.com/mkoryak/floatThead/tree/gh-pages)
+### Install
 
-[![Donate](http://programmingdrunk.com/donate-coffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SDJJ42BTC46LY&lc=US&item_name=floatThead&currency_code=USD&bn=PP%2dDonationsBF%3adonate%2dcoffee%2epng%3aNonHosted)
-
-Feedback needed on planned features
-------------
-
-See: [https://github.com/mkoryak/floatThead/issues/30](https://github.com/mkoryak/floatThead/issues/30)
-
-Install:
---------
-Install using [Bower](http://bower.io/):
-  
+#### Package managers
 ```bash
+npm install floatthead
 bower install floatThead
 ```
-  
-or download:  
-  
-- [development version](https://raw.github.com/mkoryak/floatThead/master/jquery.floatThead.js)  
-- [production version](https://raw.github.com/mkoryak/floatThead/master/jquery.floatThead.min.js)
-  
-Features:
----------
+#### Download code
+[Latest Release (zip)](https://github.com/mkoryak/floatThead/archive/1.4.4.zip)
 
--   Floats the table header - so that the user can always see it
--   Supports tables with inner scroll bars, or whole page scrolling
--   Horizontal or vertical scrolling
+#### Via CDN
+[http://cdnjs.com/libraries/floatthead/](http://cdnjs.com/libraries/floatthead/)
+[http://www.jsdelivr.com/#!jquery.floatthead](http://www.jsdelivr.com/#!jquery.floatthead)
+
+#### For java people
+[Webjar](https://github.com/webjars/floatThead)
+
+### Wrappers
+
+[angularjs directive](https://github.com/brandon-barker/angular-floatThead) by @brandon-barker
+
+[yii2 framework wrapper](https://github.com/bluezed/yii2-floatThead) by @bluezed
+
+# Things this plugin does:
+---------
+-   Works on tables within a scrollable container or whole window scrolling
+-   Works with responsive table wrappers
+-   Works with dynamically hidden/added/removed columns
 -   Doesn't clone the thead - so your events stay bound
--   Doesn't mess with your styles
--   Works on any table
--   Requires no special css
--   Works with [datatables](http://datatables.net) out of the box
+-   Doesn't mess with your styles, and doesnt require any css
+-   Works with border-collapse variants, weird margins, padding and borders
+-   Works with libs like [datatables](http://datatables.net), [perfect-scrollbar](http://mkoryak.github.io/floatThead/examples/perfect-scrollbar/), [bootstrap3](http://mkoryak.github.io/floatThead/examples/bootstrap3/), and many more
+-   Header can be floated with `position:absolute` which adds a wrapper, or `position:fixed` which does not. Both have their pros and cons. By default the best option is chosen based on your configuration
+
+
+# Things this plugin does NOT do:
+---------
+-  Does not float the footer
+-  Does not let you lock the first column like in excel
+-  **Safari and mobile safari are not supported**. It might work, or it [might not](https://github.com/mkoryak/floatThead/issues/108), depending on your markup and safari version.
+
+Common Pitfalls
+------
+If you use css and html best practices, this plugin will work. If you are stuck in 1999, you better [read the faq](http://mkoryak.github.io/floatThead/faq/).
+
+How to get help with the floatThead
+------------
+All issues should be reported through github. Coffee/Beer donations are welcome ;)
 
 Requirements:
 -------------
 
 -   jQuery 1.8.x or better (1.9 compliant) (or jQuery 1.7.x and jQuery UI core)
--   Underscore.js 1.3 or better
--   IE8, IE9, IE10, IE11, FF10+ or Chrome15+.
--   The following meta tag to placate IE: <code>&lt;meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" /&gt;</code>
 
-Demo & Docs:
-------------
+Supported Browsers:
+-------------
+-   IE8 or better (**must read** [this for ANY Internet Exploder integrations](http://mkoryak.github.io/floatThead/examples/row-groups/))
+-   Chrome, Firefox (all versions from last 3 years)
 
-[DEMOS and Documentation](http://mkoryak.github.io/floatThead/)  
-
-Using with IE9 
---------------
-FloatThead will not work properly in IE9 unless you have the following meta tag in the head of the page:  
-``` html 
-<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-```
-
-With very big tables, you may also run into this exciting bug: http://stackoverflow.com/questions/5805956/internet-explorer-9-not-rendering-table-cells-properly  
-Watch for it.
 
 Change Log
 ----------
+[see CHANGELOG.md](https://github.com/mkoryak/floatThead/blob/master/CHANGELOG.md)
 
 
-### 1.2.2
+## Who is using floatThead ?
 
-- better support for tables with dynamically hidden columns
-- can now set a class on the floating header's container div
+### [around 20K hits on guthub cod search](https://github.com/search?q=floatThead&ref=reposearch&type=Code&utf8=%E2%9C%93)
 
-### 1.2.1
+### [http://kangax.github.io/compat-table/](http://kangax.github.io/compat-table/es6/)
 
-- fixed issue with caption tag align:bottom
-- switched to uglifyjs to minify code
+### [staticsitegenerators.net](http://staticsitegenerators.net/)
 
-### 1.2.0
+### [netdisco](http://netdisco.org)
+- http://sourceforge.net/p/netdisco/netdisco-ng/ci/213352d54ee8e71cbca5ae2c1c75696800c4216b/
 
-- <code>caption</code> tag support
-- faster initialization when working with large tables (and small ones)
+### [pylyglot](https://github.com/omaciel/pylyglot)
+- https://github.com/omaciel/pylyglot/tree/master/pylyglot/static/js
 
-### 1.1.1
-
-- Fixed bugs introduced in 1.0.0 which caused issues in IE9
-
-### 1.0.0
-
-- Updated code to be jquery 1.9+ compliant
-
-## Other plugins
-
-There are plenty of other **fixed header** / **floating header** / **scrolling table header** plugins that attempt to do the same thing this plugin does. None of them support both window and overflow scrolling and many of them depend on special css or require that you set the table column widths. Some of them are good and some of them suck. Go ahead and check them out too. 
-
-I have compiled a list here with comments on each one:
+### [django-sql-explorer](https://github.com/epantry/django-sql-explorer)
+- https://github.com/epantry/django-sql-explorer/commit/34ae345325a1e07ff952800fcd6dc5bddac5e3f2-
 
 
-| Plugin  | Window Scrolling | Overflow-X Scrolling  | Overflow-Y Scrolling | No Special CSS | Keeps Bound Events | Freeze Columns |
-|:-------------:|:-------------:|:-----:|:-------------:|:-------------:|:-----:|:-----:|:-----:|
-| [FloatThead](https://github.com/mkoryak/floatThead/)  | yes | yes | yes | yes | yes | no |
-| [Fixed-Table-Header](https://github.com/markmalek/Fixed-Header-Table/) | no | yes | no | yes | no | no |
-| [jquery.scrollTableBody](https://github.com/nheldman/jquery.scrollTableBody) | no | yes | yes | no | ?? | no |
-| [Fixed table rows cols](http://meetselva.github.io/fixed-table-rows-cols) | no | yes | yes | no | ?? | yes |
-| [Table Fixed Header](https://github.com/oma/table-fixed-header) | yes | no | no | yes | no | no | 
-| [Sticky Table Header](https://github.com/jmosbech/StickyTableHeaders) | yes | no | no | yes | yes | no | 
-| [Grid](https://github.com/mmurph211/Grid) | no | yes | yes | yes | yes | no | 
+# You are still reading this?
 
+Like clicking on things? Check out these great domains:
 
- [Fixed-Table-Header](https://github.com/markmalek/Fixed-Header-Table/)
-This is the orignal. It has been around for ages and it will be the first plugin you find when you start looking. It also has a ton of open unresolved issues. It does not support window scrolling, it does not seem to support y-scrolling withing the container. It loses the events you attached to the thead. **Stay away.**
-
-[Fixed table rows cols](http://meetselva.github.io/fixed-table-rows-cols)
-Does not support window scrolling. Requires you to specify the column widths for the table. This means that the table will not be able to optimally lay itself out. It does support freezing columns in place. If you need that, this might be the plugin for you.
-
-[jquery.scrollTableBody](https://github.com/nheldman/jquery.scrollTableBody)
-Does not support window scrolling. A newcomer to the scene, not a mature project. Has some major issues with cell padding. **Stay away** until issues are resolved. 
-
-[Grid](https://github.com/mmurph211/Grid)
-This lib is very different from the rest because its main usecase is to give you a sortable grid. You do not run this plugin on an existing table - you need to provide a json or xml data source. This is a great lightweight replacement for datatables. This may be the plugin for you if you are not converting an existing table.
-
-[Table Fixed Header](https://github.com/oma/table-fixed-header)
-This is a window scrolling plugin, does not support overflow scrolling. Does not work properly when the window is resized and the table width changes. Floated header sticks around if you scroll past table. Author welcomes pull requests but does not fix issues. **Stay away**
-
-[Sticky Table Header](https://github.com/jmosbech/StickyTableHeaders)
-This is a window scrolling plugin. Does not support overflow scrolling. It is probably the best window scrolling plugin (besides this one). The author seems to fix issues as they arise. 
-
+- http://guthib.com
+- http://soundbutt.com
+- http://guthub.com
+- http://programmingdrunk.com
 
 License
 -------
-[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+MIT
